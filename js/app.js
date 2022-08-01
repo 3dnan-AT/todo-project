@@ -1,13 +1,13 @@
 var UserName = prompt("Enater Your Name");
-var UserGender = prompt("Are you a male or female?").toLowerCase();
-var UserAge = prompt("How old are you? (Ex: 25)");
+var UserGender = prompt("male or female?").toLowerCase();
+var UserAge = prompt("How old are you?");
 
 
 function checkAge(UserAge) {
     while (UserAge <= 0) {
         if (UserAge <= 0) {
-            alert("Kindly enter a valid age!");
-            UserAge = prompt("How old are you? (Ex: 25)");
+            alert("Valid Age, Enater Again");
+            UserAge = prompt("How old are you?");
         } else {
             break
         }
@@ -19,39 +19,41 @@ UserAge = checkAge(UserAge)
 
 
 
-var viewGreeting = confirm("Do you want to view the greeting message customized for you?");
+var question = confirm("Do you want to view the greeting message customized for you?");
 
 
 
-function userInitials(UserGender) {
+function userTitle(UserGender) {
     if (UserGender == "male") {
-        var initialz = "Mr.";
+        var title = "Mr.";
     } else if (UserGender == "female") {
-        var initialz = "Ms.";
+        var title = "Ms.";
     } else {
-        var initialz = null;
+        var title = null;
     }
-    return initialz;
+    return title;
 }
 
 
-if (viewGreeting == true && (userInitials(UserGender) !== null)) {
-    alert("Hello and welcome onboard " + userInitials(UserGender) + UserName + ".");
-} else if(viewGreeting == true && (userInitials(UserGender) == null)) {
-    alert("Hello and welcome onboard " + formatName(UserName) + ".");
+if (question == true && (userTitle(UserGender) !== null)) {
+    alert("welcome :)" + userTitle(UserGender) + UserName + ".");
+} else if(question == true && (userTitle(UserGender) == null)) {
+    alert("welcome :)" + UserName + ".");
 }
 
 
 
 var question2 = prompt("Is javaScript beautiful Language? (answer by Yes or No)");
 var question1 = prompt("Do you love to code? (answer by Yes or No)");
-var question3 = prompt(" Can artificial intelligence really help us? (answer by Yes or No)");
+var question3 = prompt("Can artificial intelligence really help us? (answer by Yes or No)");
 
-var answerArr = [question1, question2, question3];
+var arr = [question1, question2, question3];
 
-for (var i = 0; i < answerArr.length; i++){
-    if (answerArr[i].length == 0){
-        answerArr[i] = "invalid";
+
+if (arr[i].length == 0) {
+    console.log("invalid");
+} else {
+    for (var i = 0; i < arr.length; i++) {
+        console.log(arr[i]);
     }
-    console.log(answerArr[i]);
 }
