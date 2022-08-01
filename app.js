@@ -8,9 +8,7 @@ function checkAge(UserAge) {
         if (UserAge <= 0) {
             alert("Valid Age, Enater Again");
             UserAge = prompt("How old are you?");
-        } else {
-            break
-        }
+        } 
     } 
     return UserAge
 }
