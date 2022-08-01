@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="../style/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul class="nav-list">
+                <li class="nav-items"><img href="#" src="../img/to-do.png" alt="logo" width="70px" height="70px"></li>
+            </ul>
+        </nav>
+    </header>
+    <div style="display:flex; justify-content: center; font-size: 40px;">
+        <p>It doesn't work for now just click on enter button</p>
+    </div>
+    <main>   
+        <form id="login_form" class="form_class" action="./index.html">
+            <div class="form_div">
+                <label>Name:</label>
+                <input class="field_class" name="login_txt" type="text" placeholder="Email" autofocus>
+                <label>Gender:</label>
+                <select id="gender">
+                    <option value="male"> Male </option>
+                    <option value="female"> Female</option>
+                </select><br>
+                <label>Age:</label>
+                <input class="field_class" name="login_txt" type="text" placeholder="Age" autofocus>
+                <button class="submit_class" type="submit" form="login_form">Entrar</button>
+            </div>
+        </form>
+    </main>
+    <footer>
+        <div class="footer">
+            <p class="footer-content">Copyright &copy; ToDo App</p>
+        </div>
+    </footer>
+    
+</body>
+</html>
